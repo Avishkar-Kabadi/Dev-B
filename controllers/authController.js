@@ -34,7 +34,7 @@ module.exports.registerUser = async (req, res) => {
 
         res.cookie("token", token, {
             httpOnly: true,
-            secure: false,
+            secure: true,
             sameSite: "lax",
             maxAge: 24 * 60 * 60 * 1000,
             path: "/",
@@ -77,7 +77,7 @@ module.exports.loginUser = async (req, res) => {
 
         res.cookie("token", token, {
             httpOnly: true,
-            secure: false,
+            secure: true,
             sameSite: "lax",
             maxAge: 24 * 60 * 60 * 1000,
             path: "/",
